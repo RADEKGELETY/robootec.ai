@@ -168,3 +168,8 @@ color:#ffffff;
 margin:8px 0;
 color:#cfd7ea;
 }
+.card:hover{
+transform:translateY(-4px);
+transition:0.2s ease;
+}
+
