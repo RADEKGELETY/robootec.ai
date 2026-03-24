@@ -172,4 +172,8 @@ color:#cfd7ea;
 transform:translateY(-4px);
 transition:0.2s ease;
 }
+#results .grid{
+  margin-top:-20px;
+}
+
 
