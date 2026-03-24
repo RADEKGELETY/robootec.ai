@@ -211,8 +211,12 @@ margin:10px 0;
 color:#cfd7ea;
 }
 
-#results .grid{
-margin-top:-20px;
+section > .card + .grid{
+margin-top:24px;
+}
+
+section > .card + .grid .card{
+margin-top:0;
 }
 
 #results .card,
