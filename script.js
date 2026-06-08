@@ -34,9 +34,9 @@ if (canvas) {
     ctx.clearRect(0, 0, width, height);
 
     const gradient = ctx.createRadialGradient(width * 0.68, height * 0.36, 0, width * 0.68, height * 0.36, width * 0.62);
-    gradient.addColorStop(0, "rgba(102, 224, 188, 0.18)");
-    gradient.addColorStop(0.42, "rgba(231, 216, 173, 0.06)");
-    gradient.addColorStop(1, "rgba(5, 6, 7, 0)");
+    gradient.addColorStop(0, "rgba(15, 143, 114, 0.12)");
+    gradient.addColorStop(0.42, "rgba(157, 123, 47, 0.06)");
+    gradient.addColorStop(1, "rgba(251, 251, 248, 0)");
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, width, height);
 
@@ -58,8 +58,8 @@ if (canvas) {
         const limit = width < 720 ? 102 : 164;
 
         if (distance < limit) {
-          const alpha = (1 - distance / limit) * 0.24;
-          ctx.strokeStyle = `rgba(102, 224, 188, ${alpha})`;
+          const alpha = (1 - distance / limit) * 0.18;
+          ctx.strokeStyle = `rgba(20, 21, 24, ${alpha})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
@@ -68,7 +68,7 @@ if (canvas) {
 
           if ((i + j) % 17 === 0) {
             const progress = (Math.sin(tick * 3 + i) + 1) / 2;
-            ctx.fillStyle = "rgba(231, 216, 173, 0.48)";
+            ctx.fillStyle = "rgba(15, 143, 114, 0.34)";
             ctx.beginPath();
             ctx.arc(a.x + (b.x - a.x) * progress, a.y + (b.y - a.y) * progress, 1.15, 0, Math.PI * 2);
             ctx.fill();
@@ -79,7 +79,7 @@ if (canvas) {
 
     nodes.forEach((node) => {
       const pulse = (Math.sin(tick * 5 + node.pulse) + 1) / 2;
-      ctx.fillStyle = `rgba(102, 224, 188, ${0.34 + pulse * 0.34})`;
+      ctx.fillStyle = `rgba(15, 143, 114, ${0.28 + pulse * 0.32})`;
       ctx.beginPath();
       ctx.arc(node.x, node.y, node.size + pulse * 0.8, 0, Math.PI * 2);
       ctx.fill();
